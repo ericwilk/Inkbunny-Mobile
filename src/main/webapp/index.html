@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Inkbunny Mobile</title>
+		<!-- // Sets the page zoom level and dimensions for browser -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<!-- // JQM stuff -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<!-- // Inkbunny Mobile stuff -->
+		<script src="/js/inkbunny_mobile.js"></script>
+		<link rel="stylesheet" href="/css/inkbunny_mobile.css" />
+	</head>
+
+	<body> 
+
+		<!-- // Main JQM page that initializes the application... -->
+
+		<div data-role="page" id="home_page">
+			<!-- // Header -->
+			<div data-role="header" data-id="mainToolbarTop">
+				<h1>Inkbunny Mobile</h1>
+				<a href="#home_page" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+				<a href="/mvc/session/login/" data-icon="gear" class="ui-btn-right" data-rel="dialog" data-transition="pop" id="loginTextToChange" data-iconpos="notext">Login</a>
+			</div>
+			<!-- // Content	-->
+			<div data-role="content">
+				<ul data-role="listview">
+					<li data-icon="search"><a href="/mvc/search/">Search</a></li>
+					<li data-icon="star"><a href="/mvc/search/canned/NEW_SUBMISSIONS/">New Submissions</a></li>
+					<li data-icon="star"><a href="/mvc/search/canned/FAVORITES/">Saved Favorites</a></li>
+					<li><a href="/mvc/search/canned/POPULAR/">Popular Images</a></li>
+					<li><a href="/mvc/search/canned/RECENT_PICS/">Recent Images</a></li>
+					<li><a href="/mvc/search/canned/RECENT_STORIES/">Recent Stories</a></li>
+				</ul>
+			</div>
+			<!-- // Footer
+			<div data-role="footer" data-id="mainToolbarBottom">
+				<h1>&nbsp;</h1>
+				<a data-icon="back" class="ui-btn-left" data-iconpos="notext" onclick="history.go(-1);">Back</a>
+				<a data-icon="forward" class="ui-btn-right" data-iconpos="notext" onclick="history.go(1);">Forward</a>
+			</div> -->
+		<!-- // END Main JQM page -->
+		</div>
+		
+		<!-- // View for a single submission -->
+		
+		<div data-role="page" id="submission_view">
+			<!-- // Header -->
+			<div data-role="header">
+				<h1>Submission View</h1>
+				<a href="#home_page" data-icon="home" class="ui-btn-left" data-iconpos="notext">Home</a>
+				<a href="/mvc/session/login/" data-icon="gear" class="ui-btn-right" data-rel="dialog" data-transition="pop" id="loginTextToChange" data-iconpos="notext">Login</a>
+			</div>
+			<!-- // Content	-->
+			<div data-role="content">
+				<div id="submission_view_container">
+					<h3 id="submission_view_title_text">Sample Title</h3>
+					<img src="/img/bunny.png" id="submission_view_image_preview"></img>
+				</div>
+				<div id="submission_view_prev_next_button_container">
+					<a data-role="button" data-icon="arrow-l" data-inline="true" data-mini="true" data-iconpos="notext" id="submission_view_prev_button">Previous</a>
+					<a href="#" data-role="button" data-inline="true" id="submission_view_artist_name">Artist Name</a>
+					<a data-role="button" data-icon="arrow-r" data-inline="true" data-mini="true" data-iconpos="notext" id="submission_view_next_button">Next</a>
+				</div>
+			</div>
+			<!-- // Footer
+			<div data-role="footer">
+				<h1>&nbsp;</h1>
+				<a data-icon="back" class="ui-btn-left" data-iconpos="notext" onclick="history.go(-1);">Back</a>
+				<a data-icon="forward" class="ui-btn-right" data-iconpos="notext" onclick="history.go(1);">Forward</a>
+			</div> -->
+		</div>
+		
+		<!-- // Submission Description	-->
+
+		<div data-role="dialog" id="submission_description_view">
+			<!-- // Header -->
+			<div data-role="header">
+				<h1>Description</h1>
+			</div>
+			<div data-role="content">
+				<div id="submission_view_description_container">&nbsp;</div>
+				<p><a data-role="button" data-inline="true" data-icon="back" data-rel="back">Back</a></p>
+			</div>
+		</div>
+		
+		<!-- // No Search Results Dialog -->
+
+		<div data-role="dialog" id="nosearchresults_dialog">
+			<!-- // Header -->
+			<div data-role="header">
+				<h1>No results.</h1>
+			</div>
+			<div data-role="content">
+				<p>No results found for search.</p>
+				<p><a href="#home_page" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+			</div>
+		</div>
+
+	</body>
+
+</html>

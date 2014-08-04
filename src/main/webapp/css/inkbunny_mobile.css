@@ -1,0 +1,31 @@
+#submission_view_container {
+	width: 100%;
+	min-height: 350px;
+	text-align: center;
+}
+
+#submission_view_prev_next_button_container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	text-align: center;
+}
+
+#submission_view_description_container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	text-align: center;
+}
+
+#submission_view_container img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#submission_view_button_container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
